@@ -1,4 +1,4 @@
-https://react-tutorial-xogame.herokuapp.com/ <=click here and you can play X-O game.
+https://react-tutorial-xogame.herokuapp.com/ <=click here then you can play X-O game.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
