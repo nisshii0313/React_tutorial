@@ -7,6 +7,10 @@ body {
 ol, ul {
   padding-left: 20px;
 }
+.alert{
+  display: none;
+  color: red;
+}
 
 @media screen and ( max-width:479px ){
   body{

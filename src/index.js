@@ -26,7 +26,15 @@ function Square(props) {
     }
 }
 
+function getWindowSize() {
 
+
+  console.log(`ウィンドウサイズの横幅`);
+  console.log(window.innerWidth);
+
+  console.log(`ウィンドウサイズの高さ`);
+  console.log(window.innerHeight);
+}
 
 
 class Board extends React.Component {
@@ -142,12 +150,21 @@ class Game extends React.Component {
     let status;
     if (winner) {
         status = "Winner: " + winner;
+        if (window.innerWidth < 500) {
+        if (winner === "X") {
+          alert('勝者は X です')
+        } else {
+          alert('勝者は O です')
+        }
+        }
     } else {
       status = "Next : " + (this.state.xIsNext ? "X" : "O");
+      if (window.innerWidth < 500) {
       if (this.state.xIsNext) {
         alert('次は X の番です');
       } else {
         alert('次は O の番です');
+      }
       }
     }
 
