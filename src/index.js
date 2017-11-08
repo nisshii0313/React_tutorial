@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import swal from 'sweetalert'
 import './index.css';
 
 function Square(props) {
@@ -152,18 +153,18 @@ class Game extends React.Component {
         status = "Winner: " + winner;
         if (window.innerWidth < 500) {
         if (winner === "X") {
-          alert('勝者は X です')
+          swal('勝者は X です')
         } else {
-          alert('勝者は O です')
+          swal('勝者は O です')
         }
         }
     } else {
       status = "Next : " + (this.state.xIsNext ? "X" : "O");
       if (window.innerWidth < 500) {
       if (this.state.xIsNext) {
-        alert('次は X の番です');
+        swal('次は X の番です');
       } else {
-        alert('次は O の番です');
+        swal('次は O の番です');
       }
       }
     }
