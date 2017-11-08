@@ -15,15 +15,15 @@ ol, ul {
 @media screen and ( max-width:479px ){
   body{
     margin: 10px;
-    padding: 40px;
+    padding: 25px;
   }
   .game-info {
     display: none;
   }
   .square {
-    line-height: 45px;
-    height: 45px;
-    width: 45px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
   }
 }
 
