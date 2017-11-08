@@ -28,6 +28,7 @@ function Square(props) {
 
 
 
+
 class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -140,9 +141,14 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = "Winner: " + winner;
+        status = "Winner: " + winner;
     } else {
-      status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+      status = "Next : " + (this.state.xIsNext ? "X" : "O");
+      if (this.state.xIsNext) {
+        alert('次は X の番です');
+      } else {
+        alert('次は O の番です');
+      }
     }
 
     return (
@@ -186,7 +192,7 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c, d, e] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c] && squares[b] === squares[d] && squares[c] === squares[e]) {
-      return { winner: squares[a], line: [a, b, c, d, e] };
+      return { winner: squares[a], line: [a ,b, c, d, e] };
     }
   }
   return null;
