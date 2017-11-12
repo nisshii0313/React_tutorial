@@ -1,33 +1,68 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 4px "Century Gothic", Futura, sans-serif;
   margin: 0 ;
 	padding: 0 ;
 }
 
 ol, ul {
-  padding-left: 20px;
-}
-.alert{
-  display: none;
-  color: red;
+  padding-left: 10px;
 }
 
 @media screen and ( max-width:479px ){
   body{
-    margin: 10px;
-    padding: 25px;
+    margin: 5px;
+    padding: 5px;
+  }
+  .alert{
+    display: none;
+    color: red;
   }
   .game-info {
     display: none;
   }
   .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 30px;
+    height: 30px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+  }
+}
+@media screen and ( min-width:480px ){
+  body{
+  margin: 0 ;
+	padding: 0 ;
+  }
+  .game-info {
+    margin-left: 10px;
+  }
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
     line-height: 40px;
     height: 40px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
     width: 40px;
   }
 }
 
-.board-row:after {
+.board-row{
+  display: inline;
+}
+.board-row:nth-child(10n):after{
   clear: both;
   content: "";
   display: table;
@@ -38,20 +73,6 @@ ol, ul {
 }
 .square:hover {
   background-color: #C0C0C0;
-}
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 50px;
-  height: 50px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 50px;
 }
 
 .playerX {
@@ -64,6 +85,7 @@ ol, ul {
   outline: none;
 }
 
+
 .kbd-navigation .square:focus {
   background: #ddd;
 }
@@ -74,5 +96,5 @@ ol, ul {
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 10px;
 }
