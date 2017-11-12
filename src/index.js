@@ -128,20 +128,32 @@ class Game extends React.Component {
             swal({
               title: "Winner is X",
               text: 'Do you want to play again?',
+              closeOnClickOutside: false,
               buttons: {
                 restart: "Yas, I want to play again.",
                 no: "No."
               },
+              icon: "info",
             }).then((value) => {
               switch (value) {
                 case "restart":
-                  swal("Play again !");
-                  window.location.reload();
+                  swal("Play again !",{
+                    buttons: false,
+                    timer: 1500,
+                  });
+                  setTimeout(function(){
+                    window.location.reload();
+                  },1550);
                   break;
 
                 case "no":
-                  swal("See you !");
-                  window.close();
+                  swal("See you !",{
+                    buttons: false,
+                    timer: 2000,
+                  });
+                  setTimeout(function(){
+                    window.close();
+                  },2050);
                   break;
               }
             });
@@ -149,20 +161,32 @@ class Game extends React.Component {
             swal({
               title: 'Winner is O ',
               text: 'Do you want to play again?',
+              closeOnClickOutside: false,
               buttons: {
                 restart: "Yes, I want to play again.",
                 no: "No."
               },
+              icon: "info",
             }).then((value) => {
               switch (value) {
                 case "restart":
-                  swal("Play again !");
-                  window.location.reload();
+                  swal("Play again !",{
+                    buttons: false,
+                    timer: 1500,
+                  });
+                  setTimeout(function(){
+                    window.location.reload();
+                  },1550);
                   break;
 
                 case "no":
-                  swal("See you !")
-                  window.close();
+                  swal("See you !",{
+                    buttons: false,
+                    timer: 2000,
+                  });
+                  setTimeout(function(){
+                    window.close();
+                  },2050);
                   break;
               }
             })
