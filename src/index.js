@@ -127,38 +127,42 @@ class Game extends React.Component {
           if (winner === "X") {
             swal({
               title: "Winner is X",
-              text: "Do you want to restart?",
+              text: 'Do you want to play again?',
               buttons: {
-                no: "No",
-                restart: "Yes, I want to restart",
+                restart: "Yas, I want to play again.",
+                no: "No."
               },
-            })
-            .then((value) => {
+            }).then((value) => {
               switch (value) {
-                case "no":
-                  window.close();
-                  break;
                 case "restart":
+                  swal("Play again !");
                   window.location.reload();
+                  break;
+
+                case "no":
+                  swal("See you !");
+                  window.close();
                   break;
               }
-            })
-          } else {
+            });
+          }else {
             swal({
-              title: "Winner is O",
-              text: "Do you want to restart?",
+              title: 'Winner is O ',
+              text: 'Do you want to play again?',
               buttons: {
-                no: "No",
-                restart: "Yes, I want to restart",
+                restart: "Yes, I want to play again.",
+                no: "No."
               },
-            })
-            .then((value) => {
+            }).then((value) => {
               switch (value) {
-                case "no":
-                  window.close();
-                  break;
                 case "restart":
+                  swal("Play again !");
                   window.location.reload();
+                  break;
+
+                case "no":
+                  swal("See you !")
+                  window.close();
                   break;
               }
             })
@@ -167,11 +171,15 @@ class Game extends React.Component {
     } else {
       status = "Next : " + (this.state.xIsNext ? "X" : "O");
       if (window.innerWidth < 480) {
-      if (this.state.xIsNext) {
-        swal('Next : X');
-      } else {
-        swal('Next : O');
-      }
+        if (this.state.xIsNext) {
+          swal({
+            title:'Next : X'
+          });
+        } else {
+          swal({
+            title:'Next : O'
+          });
+        }
       }
     }
 
