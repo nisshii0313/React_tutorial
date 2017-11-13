@@ -27,17 +27,6 @@ function Square(props) {
     }
 }
 
-function getWindowSize() {
-
-
-  console.log(`ウィンドウサイズの横幅`);
-  console.log(window.innerWidth);
-
-  console.log(`ウィンドウサイズの高さ`);
-  console.log(window.innerHeight);
-}
-
-
 class Board extends React.Component {
   renderSquare(i) {
     return (
