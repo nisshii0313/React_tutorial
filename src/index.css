@@ -1,12 +1,30 @@
+@-webkit-keyframes bg-color {
+  0% { background-color: #FFFFFF; }
+  20% { background-color: #CCFFcc; }
+  40% { background-color: #CCFF99; }
+  60% { background-color: #CCFF66; }
+  80% { background-color: #CCFF33; }
+  100% { background-color: #CCFF00; }
+}
+@keyframes bg-color {
+  0% { background-color: #FFFFFF; }
+  20% { background-color: #CCFFcc; }
+  40% { background-color: #CCFF99; }
+  60% { background-color: #CCFF66; }
+  80% { background-color: #CCFF33; }
+  100% { background-color: #CCFF00; }
+}
+
 body {
   font: 4px "Century Gothic", Futura, sans-serif;
-  margin: 0;
-	padding: 0;
+  animation: bg-color 5s infinite alternate;
+  -webkit-animation: bg-color 5s infinite alternate;
 }
 
 ol, ul {
   padding-left: 10px;
 }
+
 
 @media screen and ( max-width:479px ){
   body{
@@ -58,25 +76,38 @@ ol, ul {
 }
 @media screen and ( min-width:480px ){
   body{
-  margin: 0 ;
-	padding: 0 ;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+
+    width: 1280px;
+    height: 640px;
   }
   .game-info {
-    margin-left: 10px;
+    margin-left: 25px;
+    font-size: 20px;
+    display: list-item;
+  }
+  button {
+    width: 120px;
+    height: 50px;
   }
   .square {
     background: #fff;
     border: 1px solid #999;
     float: left;
-    font-size: 10px;
+    font-size: 50px;
     font-weight: bold;
-    line-height: 40px;
-    height: 40px;
+    line-height: 60px;
+    height: 60px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 40px;
+    width: 60px;
   }
 }
 

@@ -115,7 +115,7 @@ class Game extends React.Component {
         'restart';
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => move>1 ? this.jumpTo(move) : window.location.reload()}>{desc}</button>
         </li>
       );
     });
@@ -152,7 +152,7 @@ class Game extends React.Component {
                     timer: 2000,
                   });
                   setTimeout(function(){
-                    window.close();
+                    window.open('about:blank','_self').close();
                   },2050);
                   break;
               }
@@ -185,7 +185,7 @@ class Game extends React.Component {
                     timer: 2000,
                   });
                   setTimeout(function(){
-                    window.close();
+                    window.open('about:blank','_self').close();
                   },2050);
                   break;
               }
@@ -252,7 +252,7 @@ function calculateWinner(squares) {
     [9-s, 18-s, 27-s, 36-s, 45-s],
     [19-s, 28-s, 37-s, 46-s, 55-s],
     [29-s, 38-s, 47-s, 56-s, 65-s],
-    [39-s, 45-s, 54-s, 63-s, 72-s],
+    [39-s, 48-s, 57-s, 66-s, 75-s],
     [49-s, 58-s, 67-s, 76-s, 85-s],
     [59-s, 65-s, 74-s, 83-s, 92-s],
     [10*s, 10*s+10, 10*s+20, 10*s+30, 10*s+40],
