@@ -95,6 +95,9 @@ ol, ul {
     width: 120px;
     height: 50px;
   }
+  button:hover {
+    background-color: #C0C0C0;
+  }
   .square {
     background: #fff;
     border: 1px solid #999;
