@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import swal from 'sweetalert'
+import swal from 'sweetalert';
 import './index.css';
 
 function Square(props) {
   if (props.highlight) {
     return (
-      <button className="square" onClick={() => props.onClick()} style={{color: "yellow"}}>
+      <button className="square" onClick={() => props.onClick()} style={{color: "yellow"}}>//when O or X order 5 continentally, 
         {props.value}
       </button>
     );
@@ -52,6 +52,8 @@ class Board extends React.Component {
     );
   }
 }
+
+
 class Game extends React.Component {
   constructor() {
     super();
@@ -197,7 +199,7 @@ class Game extends React.Component {
     }
 
     return (
-      <div className="game">
+      <div className="game" onKeyDown={this.aaa}>
         <div className="game-board">
           <Board
             squares={current.squares}
@@ -213,6 +215,7 @@ class Game extends React.Component {
     );
   }
 }
+
 
 // ========================================
 
@@ -256,10 +259,8 @@ function calculateWinner(squares) {
     [10*s+9, 10*s+19, 10*s+29, 10*s+39, 10*s+49]
     )
   }
-  console.log(lines);
 
   for (let i = 0; i < lines.length; i++) {
-    console.log(lines.length);
     const [a, b, c, d, e] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c] && squares[b] === squares[d] && squares[c] === squares[e]) {
       return { winner: squares[a], line: [a ,b, c, d, e] };
