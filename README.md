@@ -10,3 +10,4 @@ I add some contents to normal version [React-tutorial](https://reactjs.org/tutor
 - improve design
 
 Please play my application => [React App](https://xogame-mobile.herokuapp.com/) 
+(I recommend to open this outside Internet Explorer)
